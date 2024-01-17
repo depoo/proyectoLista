@@ -1,0 +1,28 @@
+<h4>Agregar cosas a la lista </h4>
+    <form  class="row">
+      <input type="text"
+             class="form-control mb-2"
+             placeholder="Nombre"
+             [(ngModel)]="personCount.name"
+             name="name"
+      >
+
+      <input type="number"
+             class="form-control mb-2"
+             placeholder="Numero de cuenta"
+             [(ngModel)]="personCount.number"
+             name="number"
+      >
+
+      <select class="form-select mb-2"
+              aria-label="Default select example"
+      >
+        <option selected *ngFor="let count of nameCount">
+          {{count}}
+        </option>
+      </select>
+
+      <button type="submit" class="btn btn-primary">
+        Agregar
+      </button>
+    </form>
